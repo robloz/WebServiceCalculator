@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>kudvenkat</RootNamespace>
-    <AssemblyName>kudvenkat</AssemblyName>
+    <RootNamespace>CalculatorClient</RootNamespace>
+    <AssemblyName>CalculatorClient</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -59,57 +59,36 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CalculatorWebApplication.asmx" />
+    <Content Include="css\style.css" />
+    <Content Include="Service References\CalculatorService\CalculatorClient.CalculatorService.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\CalculatorService\CalculatorClient.CalculatorService.GetLogOperationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\CalculatorService\configuration91.svcinfo" />
     <None Include="Service References\CalculatorService\configuration.svcinfo" />
-    <Content Include="Service References\CalculatorService\kudvenkat.CalculatorService.ArrayOfString.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\CalculatorService\kudvenkat.CalculatorService.GetLogOperationsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Service References\CalculatorService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
-    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
-    <Content Include="Service References\ServiceReference1\kudvenkat.ServiceReference1.ArrayOfString.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Service References\ServiceReference1\kudvenkat.ServiceReference1.GetLogOperationsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\ServiceReference1\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="CalculatorForm.aspx" />
     <Content Include="WebServiceCalculator.asmx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalculatorWebApplication.asmx.cs">
-      <DependentUpon>CalculatorWebApplication.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\CalculatorService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Service References\ServiceReference1\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="CalculatorForm.aspx.cs">
+      <DependentUpon>CalculatorForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="CalculatorForm.aspx.designer.cs">
+      <DependentUpon>CalculatorForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebServiceCalculator.asmx.cs">
       <DependentUpon>WebServiceCalculator.asmx</DependentUpon>
@@ -118,20 +97,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\CalculatorService\WebServiceCalculator.wsdl" />
-    <None Include="Service References\ServiceReference1\WebServiceCalculator.wsdl" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\CalculatorService\" />
-    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

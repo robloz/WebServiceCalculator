@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace kudvenkat.CalculatorService {
+namespace CalculatorClient.CalculatorService {
     using System.Runtime.Serialization;
     using System;
     
@@ -42,10 +42,10 @@ namespace kudvenkat.CalculatorService {
     public interface WebServiceCalculatorSoap {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WebServiceCalculator/ExecuteOperation", ReplyAction="*")]
-        float ExecuteOperation(float firstNumber, float secondNumber, kudvenkat.CalculatorService.EnumOperationBi operation);
+        float ExecuteOperation(float firstNumber, float secondNumber, CalculatorClient.CalculatorService.EnumOperationBi operation);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WebServiceCalculator/ExecuteOperation", ReplyAction="*")]
-        System.Threading.Tasks.Task<float> ExecuteOperationAsync(float firstNumber, float secondNumber, kudvenkat.CalculatorService.EnumOperationBi operation);
+        System.Threading.Tasks.Task<float> ExecuteOperationAsync(float firstNumber, float secondNumber, CalculatorClient.CalculatorService.EnumOperationBi operation);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WebServiceCalculator/Add", ReplyAction="*")]
         int Add(int firstNumber, int secondNumber);
@@ -55,10 +55,10 @@ namespace kudvenkat.CalculatorService {
         
         // CODEGEN: Generating message contract since element name GetLogOperationsResult from namespace http://tempuri.org/WebServiceCalculator is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WebServiceCalculator/GetLogOperations", ReplyAction="*")]
-        kudvenkat.CalculatorService.GetLogOperationsResponse GetLogOperations(kudvenkat.CalculatorService.GetLogOperationsRequest request);
+        CalculatorClient.CalculatorService.GetLogOperationsResponse GetLogOperations(CalculatorClient.CalculatorService.GetLogOperationsRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WebServiceCalculator/GetLogOperations", ReplyAction="*")]
-        System.Threading.Tasks.Task<kudvenkat.CalculatorService.GetLogOperationsResponse> GetLogOperationsAsync(kudvenkat.CalculatorService.GetLogOperationsRequest request);
+        System.Threading.Tasks.Task<CalculatorClient.CalculatorService.GetLogOperationsResponse> GetLogOperationsAsync(CalculatorClient.CalculatorService.GetLogOperationsRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -68,12 +68,12 @@ namespace kudvenkat.CalculatorService {
     public partial class GetLogOperationsRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetLogOperations", Namespace="http://tempuri.org/WebServiceCalculator", Order=0)]
-        public kudvenkat.CalculatorService.GetLogOperationsRequestBody Body;
+        public CalculatorClient.CalculatorService.GetLogOperationsRequestBody Body;
         
         public GetLogOperationsRequest() {
         }
         
-        public GetLogOperationsRequest(kudvenkat.CalculatorService.GetLogOperationsRequestBody Body) {
+        public GetLogOperationsRequest(CalculatorClient.CalculatorService.GetLogOperationsRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -95,12 +95,12 @@ namespace kudvenkat.CalculatorService {
     public partial class GetLogOperationsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetLogOperationsResponse", Namespace="http://tempuri.org/WebServiceCalculator", Order=0)]
-        public kudvenkat.CalculatorService.GetLogOperationsResponseBody Body;
+        public CalculatorClient.CalculatorService.GetLogOperationsResponseBody Body;
         
         public GetLogOperationsResponse() {
         }
         
-        public GetLogOperationsResponse(kudvenkat.CalculatorService.GetLogOperationsResponseBody Body) {
+        public GetLogOperationsResponse(CalculatorClient.CalculatorService.GetLogOperationsResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -112,23 +112,23 @@ namespace kudvenkat.CalculatorService {
     public partial class GetLogOperationsResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public kudvenkat.CalculatorService.ArrayOfString GetLogOperationsResult;
+        public CalculatorClient.CalculatorService.ArrayOfString GetLogOperationsResult;
         
         public GetLogOperationsResponseBody() {
         }
         
-        public GetLogOperationsResponseBody(kudvenkat.CalculatorService.ArrayOfString GetLogOperationsResult) {
+        public GetLogOperationsResponseBody(CalculatorClient.CalculatorService.ArrayOfString GetLogOperationsResult) {
             this.GetLogOperationsResult = GetLogOperationsResult;
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface WebServiceCalculatorSoapChannel : kudvenkat.CalculatorService.WebServiceCalculatorSoap, System.ServiceModel.IClientChannel {
+    public interface WebServiceCalculatorSoapChannel : CalculatorClient.CalculatorService.WebServiceCalculatorSoap, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class WebServiceCalculatorSoapClient : System.ServiceModel.ClientBase<kudvenkat.CalculatorService.WebServiceCalculatorSoap>, kudvenkat.CalculatorService.WebServiceCalculatorSoap {
+    public partial class WebServiceCalculatorSoapClient : System.ServiceModel.ClientBase<CalculatorClient.CalculatorService.WebServiceCalculatorSoap>, CalculatorClient.CalculatorService.WebServiceCalculatorSoap {
         
         public WebServiceCalculatorSoapClient() {
         }
@@ -149,11 +149,11 @@ namespace kudvenkat.CalculatorService {
                 base(binding, remoteAddress) {
         }
         
-        public float ExecuteOperation(float firstNumber, float secondNumber, kudvenkat.CalculatorService.EnumOperationBi operation) {
+        public float ExecuteOperation(float firstNumber, float secondNumber, CalculatorClient.CalculatorService.EnumOperationBi operation) {
             return base.Channel.ExecuteOperation(firstNumber, secondNumber, operation);
         }
         
-        public System.Threading.Tasks.Task<float> ExecuteOperationAsync(float firstNumber, float secondNumber, kudvenkat.CalculatorService.EnumOperationBi operation) {
+        public System.Threading.Tasks.Task<float> ExecuteOperationAsync(float firstNumber, float secondNumber, CalculatorClient.CalculatorService.EnumOperationBi operation) {
             return base.Channel.ExecuteOperationAsync(firstNumber, secondNumber, operation);
         }
         
@@ -166,26 +166,26 @@ namespace kudvenkat.CalculatorService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        kudvenkat.CalculatorService.GetLogOperationsResponse kudvenkat.CalculatorService.WebServiceCalculatorSoap.GetLogOperations(kudvenkat.CalculatorService.GetLogOperationsRequest request) {
+        CalculatorClient.CalculatorService.GetLogOperationsResponse CalculatorClient.CalculatorService.WebServiceCalculatorSoap.GetLogOperations(CalculatorClient.CalculatorService.GetLogOperationsRequest request) {
             return base.Channel.GetLogOperations(request);
         }
         
-        public kudvenkat.CalculatorService.ArrayOfString GetLogOperations() {
-            kudvenkat.CalculatorService.GetLogOperationsRequest inValue = new kudvenkat.CalculatorService.GetLogOperationsRequest();
-            inValue.Body = new kudvenkat.CalculatorService.GetLogOperationsRequestBody();
-            kudvenkat.CalculatorService.GetLogOperationsResponse retVal = ((kudvenkat.CalculatorService.WebServiceCalculatorSoap)(this)).GetLogOperations(inValue);
+        public CalculatorClient.CalculatorService.ArrayOfString GetLogOperations() {
+            CalculatorClient.CalculatorService.GetLogOperationsRequest inValue = new CalculatorClient.CalculatorService.GetLogOperationsRequest();
+            inValue.Body = new CalculatorClient.CalculatorService.GetLogOperationsRequestBody();
+            CalculatorClient.CalculatorService.GetLogOperationsResponse retVal = ((CalculatorClient.CalculatorService.WebServiceCalculatorSoap)(this)).GetLogOperations(inValue);
             return retVal.Body.GetLogOperationsResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<kudvenkat.CalculatorService.GetLogOperationsResponse> kudvenkat.CalculatorService.WebServiceCalculatorSoap.GetLogOperationsAsync(kudvenkat.CalculatorService.GetLogOperationsRequest request) {
+        System.Threading.Tasks.Task<CalculatorClient.CalculatorService.GetLogOperationsResponse> CalculatorClient.CalculatorService.WebServiceCalculatorSoap.GetLogOperationsAsync(CalculatorClient.CalculatorService.GetLogOperationsRequest request) {
             return base.Channel.GetLogOperationsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<kudvenkat.CalculatorService.GetLogOperationsResponse> GetLogOperationsAsync() {
-            kudvenkat.CalculatorService.GetLogOperationsRequest inValue = new kudvenkat.CalculatorService.GetLogOperationsRequest();
-            inValue.Body = new kudvenkat.CalculatorService.GetLogOperationsRequestBody();
-            return ((kudvenkat.CalculatorService.WebServiceCalculatorSoap)(this)).GetLogOperationsAsync(inValue);
+        public System.Threading.Tasks.Task<CalculatorClient.CalculatorService.GetLogOperationsResponse> GetLogOperationsAsync() {
+            CalculatorClient.CalculatorService.GetLogOperationsRequest inValue = new CalculatorClient.CalculatorService.GetLogOperationsRequest();
+            inValue.Body = new CalculatorClient.CalculatorService.GetLogOperationsRequestBody();
+            return ((CalculatorClient.CalculatorService.WebServiceCalculatorSoap)(this)).GetLogOperationsAsync(inValue);
         }
     }
 }

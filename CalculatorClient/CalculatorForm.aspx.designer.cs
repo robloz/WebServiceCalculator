@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace kudvenkat {
+namespace CalculatorClient {
     
     
     public partial class WebForm1 {
         
         /// <summary>
-        /// form1 control.
+        /// calculatorForm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm calculatorForm;
         
         /// <summary>
         /// LabelFirstNumber control.
@@ -103,12 +103,12 @@ namespace kudvenkat {
         protected global::System.Web.UI.WebControls.Button ButtonDiv;
         
         /// <summary>
-        /// GVCalculation control.
+        /// HistoryOperations control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GVCalculation;
+        protected global::System.Web.UI.WebControls.GridView HistoryOperations;
     }
 }
