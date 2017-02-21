@@ -47,12 +47,6 @@ namespace CalculatorClient.CalculatorService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WebServiceCalculator/ExecuteOperation", ReplyAction="*")]
         System.Threading.Tasks.Task<float> ExecuteOperationAsync(float firstNumber, float secondNumber, CalculatorClient.CalculatorService.EnumOperationBi operation);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WebServiceCalculator/Add", ReplyAction="*")]
-        int Add(int firstNumber, int secondNumber);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WebServiceCalculator/Add", ReplyAction="*")]
-        System.Threading.Tasks.Task<int> AddAsync(int firstNumber, int secondNumber);
-        
         // CODEGEN: Generating message contract since element name GetLogOperationsResult from namespace http://tempuri.org/WebServiceCalculator is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/WebServiceCalculator/GetLogOperations", ReplyAction="*")]
         CalculatorClient.CalculatorService.GetLogOperationsResponse GetLogOperations(CalculatorClient.CalculatorService.GetLogOperationsRequest request);
@@ -155,14 +149,6 @@ namespace CalculatorClient.CalculatorService {
         
         public System.Threading.Tasks.Task<float> ExecuteOperationAsync(float firstNumber, float secondNumber, CalculatorClient.CalculatorService.EnumOperationBi operation) {
             return base.Channel.ExecuteOperationAsync(firstNumber, secondNumber, operation);
-        }
-        
-        public int Add(int firstNumber, int secondNumber) {
-            return base.Channel.Add(firstNumber, secondNumber);
-        }
-        
-        public System.Threading.Tasks.Task<int> AddAsync(int firstNumber, int secondNumber) {
-            return base.Channel.AddAsync(firstNumber, secondNumber);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

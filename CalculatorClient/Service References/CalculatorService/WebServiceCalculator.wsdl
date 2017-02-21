@@ -26,21 +26,6 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="Add">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="firstNumber" type="s:int" />
-            <s:element minOccurs="1" maxOccurs="1" name="secondNumber" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="AddResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="AddResult" type="s:int" />
-          </s:sequence>
-        </s:complexType>
-      </s:element>
       <s:element name="GetLogOperations">
         <s:complexType />
       </s:element>
@@ -64,12 +49,6 @@
   <wsdl:message name="ExecuteOperationSoapOut">
     <wsdl:part name="parameters" element="tns:ExecuteOperationResponse" />
   </wsdl:message>
-  <wsdl:message name="AddSoapIn">
-    <wsdl:part name="parameters" element="tns:Add" />
-  </wsdl:message>
-  <wsdl:message name="AddSoapOut">
-    <wsdl:part name="parameters" element="tns:AddResponse" />
-  </wsdl:message>
   <wsdl:message name="GetLogOperationsSoapIn">
     <wsdl:part name="parameters" element="tns:GetLogOperations" />
   </wsdl:message>
@@ -81,10 +60,6 @@
       <wsdl:input message="tns:ExecuteOperationSoapIn" />
       <wsdl:output message="tns:ExecuteOperationSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="Add">
-      <wsdl:input message="tns:AddSoapIn" />
-      <wsdl:output message="tns:AddSoapOut" />
-    </wsdl:operation>
     <wsdl:operation name="GetLogOperations">
       <wsdl:input message="tns:GetLogOperationsSoapIn" />
       <wsdl:output message="tns:GetLogOperationsSoapOut" />
@@ -94,15 +69,6 @@
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="ExecuteOperation">
       <soap:operation soapAction="http://tempuri.org/WebServiceCalculator/ExecuteOperation" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="Add">
-      <soap:operation soapAction="http://tempuri.org/WebServiceCalculator/Add" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -131,15 +97,6 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="Add">
-      <soap12:operation soapAction="http://tempuri.org/WebServiceCalculator/Add" style="document" />
-      <wsdl:input>
-        <soap12:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="GetLogOperations">
       <soap12:operation soapAction="http://tempuri.org/WebServiceCalculator/GetLogOperations" style="document" />
       <wsdl:input>
@@ -152,10 +109,10 @@
   </wsdl:binding>
   <wsdl:service name="WebServiceCalculator">
     <wsdl:port name="WebServiceCalculatorSoap" binding="tns:WebServiceCalculatorSoap">
-      <soap:address location="http://localhost:1241/WebServiceCalculator.asmx" />
+      <soap:address location="http://localhost:1262/WebServiceCalculator.asmx" />
     </wsdl:port>
     <wsdl:port name="WebServiceCalculatorSoap12" binding="tns:WebServiceCalculatorSoap12">
-      <soap12:address location="http://localhost:1241/WebServiceCalculator.asmx" />
+      <soap12:address location="http://localhost:1262/WebServiceCalculator.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

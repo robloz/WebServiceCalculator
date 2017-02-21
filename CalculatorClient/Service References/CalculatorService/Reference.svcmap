@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3317de24-991a-4aec-8c8a-b22d1afd5313" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b4ef64da-4948-4e3b-983e-9a4bd242a998" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,10 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:1241/WebServiceCalculator.asmx?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:1262/WebServiceCalculator.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WebServiceCalculator.wsdl" MetadataType="Wsdl" ID="b811883c-8148-4530-bc07-57d1f08ef5b4" SourceId="1" SourceUrl="http://localhost:1241/WebServiceCalculator.asmx?WSDL" />
+    <MetadataFile FileName="WebServiceCalculator.wsdl" MetadataType="Wsdl" ID="9444c328-28c5-44d5-8345-93b71dc5ff61" SourceId="1" SourceUrl="http://localhost:1262/WebServiceCalculator.asmx?wsdl" />
+    <MetadataFile FileName="WebServiceCalculator.disco" MetadataType="Disco" ID="37439ef8-e4cc-4de1-aa28-5930591aed1e" SourceId="1" SourceUrl="http://localhost:1262/WebServiceCalculator.asmx?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
